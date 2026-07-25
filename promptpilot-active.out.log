@@ -1,0 +1,2 @@
+PromptPilot provider configuration: OpenRouter=true, OpenAI=false
+PromptPilot is running at http://localhost:3000

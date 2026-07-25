@@ -1,0 +1,7 @@
+feedback.json
+ppt-build/
+PromptPilot_User_Guide/
+PromptPilot_User_Guide.pptx.inspect.ndjson
+
+.vercel
+.env

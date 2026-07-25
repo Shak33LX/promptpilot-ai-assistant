@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PromptPilot — AI Assistant</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main>
+    <header class="hero">
+      <div class="brand"><span class="logo">✦</span> PromptPilot</div>
+      <p class="eyebrow">PROMPT ENGINEERING PROJECT</p>
+      <h1>Your focused AI assistant.</h1>
+      <p class="lead">Ask, summarize, create, or plan — with prompts designed for clear results.</p>
+    </header>
+
+    <section class="workspace" aria-label="AI assistant workspace">
+      <div class="controls">
+        <p class="section-label">1. Choose a task</p>
+        <div class="task-grid" role="radiogroup" aria-label="Assistant task">
+          <button class="task active" data-task="question"><span>⌕</span><b>Answer</b><small>Factual questions</small></button>
+          <button class="task" data-task="summarize"><span>≋</span><b>Summarize</b><small>Key points</small></button>
+          <button class="task" data-task="creative"><span>✎</span><b>Create</b><small>Stories & poems</small></button>
+          <button class="task" data-task="advice"><span>↗</span><b>Advise</b><small>Practical guidance</small></button>
+        </div>
+        <div class="prompt-row">
+          <label for="promptStyle">2. Pick a prompt style</label>
+          <select id="promptStyle"></select>
+        </div>
+        <label class="input-label" for="userInput">3. Enter your request</label>
+        <textarea id="userInput" placeholder="Example: What is the capital of France?"></textarea>
+        <div class="action-row"><span id="modeHint">Runs in demo mode until an API key is configured.</span><button id="submitBtn">Ask PromptPilot <span>→</span></button></div>
+      </div>
+
+      <aside class="response-panel" aria-live="polite">
+        <div class="response-head"><div><p class="section-label">RESPONSE</p><h2>Ready when you are</h2></div><span id="modeBadge">DEMO</span></div>
+        <article id="answer" class="answer">Choose a task, write your request, and I’ll respond here.</article>
+        <div id="feedback" class="feedback hidden">
+          <p>Was this response helpful?</p>
+          <div><button data-rating="yes">Yes, helpful</button><button data-rating="no">Not yet</button></div>
+          <small id="feedbackStatus"></small>
+        </div>
+      </aside>
+    </section>
+
+    <section class="prompt-library">
+      <div><p class="section-label">PROMPT LIBRARY</p><h2>Three prompt approaches for every function.</h2></div>
+      <div id="promptCards" class="prompt-cards"></div>
+    </section>
+  </main>
+  <footer>PromptPilot • Designed for the AI Assistant Development project</footer>
+  <script src="app.js"></script>
+</body>
+</html>
