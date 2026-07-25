@@ -1,10 +1,6 @@
 # Project Title: PromptPilot – An AI Assistant for Prompt Engineering and Task Automation
 
 **Student Name:** Mohamed Shakeel  
-**Department:** Computer Science / Software Engineering  
-**Course:** AI Assistant Development & Prompt Engineering  
-**Institution:** [Insert Institution Name]  
-**Submission Date:** July 25, 2026
 
 ---
 
@@ -160,13 +156,20 @@ The application was validated through manual functional testing to ensure the pr
 
 ## Screenshots
 
-> *[Placeholder: Screenshot of the Home Page showcasing the clean UI]*
+![Home Page showcasing the clean UI](screenshots/home.png)
+*Home Page showcasing the clean UI*
 
-> *[Placeholder: Screenshot of the Task and Prompt Style Selection]*
+![Task and Prompt Style Selection](screenshots/task_selection.png)
+*Task and Prompt Style Selection*
 
-> *[Placeholder: Screenshot of a Generated Response Output in the dark panel]*
+![Generated Response Output in the dark panel](screenshots/response.png)
+*Generated Response Output in the dark panel*
 
-> *[Placeholder: Screenshot of the Feedback Evaluation Dialog]*
+![Feedback Evaluation Dialog](screenshots/feedback.png)
+*Feedback Evaluation Dialog*
+
+![Prompt Library Overview](screenshots/prompt_library.png)
+*Prompt Library Overview*
 
 ---
 
