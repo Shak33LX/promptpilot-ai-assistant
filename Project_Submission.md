@@ -168,8 +168,7 @@ The application was validated through manual functional testing to ensure the pr
 ![Feedback Evaluation Dialog](screenshots/feedback.png)
 *Feedback Evaluation Dialog*
 
-![Prompt Library Overview](screenshots/prompt_library.png)
-*Prompt Library Overview*
+
 
 ---
 
