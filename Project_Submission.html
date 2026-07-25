@@ -3,67 +3,354 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project Submission</title>
+    <title>Project Submission: PromptPilot</title>
+    <!-- Include Mermaid.js for rendering charts -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Arial, sans-serif;
             line-height: 1.6;
             color: #333;
-            max-width: 800px;
+            max-width: 900px;
             margin: 0 auto;
-            padding: 40px 20px;
+            padding: 40px;
+            background-color: #fff;
         }
-        h1 { border-bottom: 2px solid #333; padding-bottom: 10px; }
-        h2 { color: #555; margin-top: 30px; }
-        .placeholder { color: #e74c3c; font-style: italic; }
-        a { color: #3498db; text-decoration: none; }
-        a:hover { text-decoration: underline; }
-        ul { margin-top: 10px; }
-        li { margin-bottom: 15px; }
-        hr { margin: 40px 0; border: 0; border-top: 1px solid #ddd; }
+        .cover {
+            text-align: center;
+            margin-bottom: 60px;
+            padding-bottom: 40px;
+            border-bottom: 2px solid #2c3e50;
+        }
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        .cover p {
+            font-size: 1.2rem;
+            margin: 5px 0;
+            color: #555;
+        }
+        h2 {
+            color: #2c3e50;
+            margin-top: 40px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 5px;
+        }
+        h3 {
+            color: #34495e;
+            margin-top: 30px;
+        }
+        p, ul, ol {
+            font-size: 1rem;
+            color: #444;
+        }
+        ul {
+            margin-top: 5px;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            margin-bottom: 30px;
+            font-size: 0.95rem;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #f8f9fa;
+            color: #2c3e50;
+        }
+        .mermaid {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            margin: 20px 0;
+        }
+        blockquote {
+            border-left: 4px solid #3498db;
+            padding-left: 15px;
+            margin-left: 0;
+            color: #555;
+            font-style: italic;
+            background-color: #f9fbfd;
+            padding: 15px;
+        }
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        code {
+            background-color: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            color: #d35400;
+        }
     </style>
+    <script>mermaid.initialize({startOnLoad:true});</script>
 </head>
 <body>
 
-    <h1>Project Submission: PromptPilot</h1>
-    
-    <p><strong>Overview:</strong> PromptPilot is a web-based AI assistant project designed to showcase prompt-engineering and serverless deployment.</p>
+    <div class="cover">
+        <h1>Project Title: PromptPilot</h1>
+        <p><strong>An AI Assistant for Prompt Engineering and Task Automation</strong></p>
+        <br>
+        <p><strong>Student Name:</strong> Mohamed Shakeel</p>
+        <p><strong>Department:</strong> Computer Science / Software Engineering</p>
+        <p><strong>Course:</strong> AI Assistant Development & Prompt Engineering</p>
+        <p><strong>Submission Date:</strong> July 25, 2026</p>
+    </div>
 
-    <hr>
+    <h2>Executive Summary</h2>
+    <p>PromptPilot is a responsive, web-based artificial intelligence assistant designed to streamline user interactions with large language models through structured prompt engineering. By abstracting the complexity of prompt creation into intuitive task categories and prompt styles, the application ensures high-quality, consistent outputs. The system features four primary assistant modes, customizable output styles, and a local feedback collection loop to continuously refine prompt effectiveness. PromptPilot is deployed live on Vercel utilizing a serverless Node.js backend.</p>
 
-    <h2>🔗 Project Links</h2>
-    
+    <h2>Project Overview</h2>
+    <p><strong>What is PromptPilot?</strong><br>
+    PromptPilot is a specialized web interface that acts as an intermediary between users and AI models. It provides pre-engineered prompt templates for common tasks to guarantee optimal AI responses.</p>
+    <p><strong>Why it was developed & Problem it solves:</strong><br>
+    Users frequently struggle to extract accurate, well-formatted, or correctly toned responses from AI due to a lack of prompt engineering experience (often referred to as the "blank canvas problem"). PromptPilot solves this by constraining the inputs and dynamically injecting system instructions that guide the AI to produce specific, reliable results without requiring the user to master prompt design.</p>
+    <p><strong>Target Users:</strong></p>
     <ul>
-        <li>
-            <strong>1. Live Deployment Link:</strong><br>
-            <a href="https://promptpilot-six.vercel.app" target="_blank">https://promptpilot-six.vercel.app</a>
-        </li>
-        <br>
-        <li>
-            <strong>2. GitHub Repository Link:</strong><br>
-            <a href="https://github.com/Shak33LX/promptpilot-ai-assistant" target="_blank">https://github.com/Shak33LX/promptpilot-ai-assistant</a>
-        </li>
-        <br>
-        <li>
-            <strong>3. Google Drive Link:</strong><br>
-            <span class="placeholder">(Replace this placeholder with your actual Google Drive URL)</span><br>
-            <a href="#">[Your Google Drive Link Here]</a>
-        </li>
+        <li><strong>Students:</strong> For studying, summarizing notes, and generating revision material.</li>
+        <li><strong>Professionals & Writers:</strong> For brainstorming, drafting creative content, and synthesizing information.</li>
+        <li><strong>General Users:</strong> Seeking actionable advice and quick factual answers.</li>
     </ul>
 
-    <hr>
+    <h2>Objectives</h2>
+    <ol>
+        <li><strong>Simplify AI Interaction:</strong> Lower the barrier to entry for effective AI utilization through an intuitive graphical interface.</li>
+        <li><strong>Implement Structured Prompting:</strong> Utilize system-level prompt engineering to maintain consistent tone, length, and format across responses.</li>
+        <li><strong>Establish a Feedback Loop:</strong> Collect user feedback to evaluate and iteratively improve the underlying prompt logic.</li>
+        <li><strong>Deploy a Scalable Architecture:</strong> Create a lightweight, serverless application capable of secure API communication.</li>
+    </ol>
 
-    <h2>📄 Project Documentation</h2>
-    
+    <h2>Features</h2>
     <ul>
-        <li>
-            <strong>User Guide:</strong><br>
-            Detailed instructions for running and utilizing the AI assistant are available in the project documentation (<code>USER_GUIDE.md</code>).
-        </li>
+        <li><strong>Four Assistant Modes:</strong> Categorized task selections to fit user needs (Answer, Summarize, Create, Advise).</li>
+        <li><strong>Three Prompt Styles per Mode:</strong> Each mode includes three unique sub-styles that adjust the AI's persona, output length, and formatting constraint (e.g., "Quick fact" vs "Study answer").</li>
+        <li><strong>Local Feedback Collection:</strong> A built-in rating system ("Yes, helpful" / "Not yet") that records user satisfaction data asynchronously to evaluate prompt effectiveness.</li>
+        <li><strong>Responsive Web Interface:</strong> A modern, accessible frontend design that adapts to desktop and mobile environments.</li>
+        <li><strong>Live Deployment:</strong> Hosted reliably on Vercel using serverless functions.</li>
+        <li><strong>Version Control:</strong> Fully tracked and maintained via a GitHub repository.</li>
     </ul>
 
-    <hr>
-    <p style="text-align: center; color: #888;"><em>Submitted for Review</em></p>
+    <h2>System Workflow</h2>
+    <p>The user journey follows a strict, sequential pipeline ensuring the generated prompt is highly contextualized before it reaches the AI provider.</p>
+    
+    <div class="mermaid">
+    graph TD
+        A([User Accesses App]) --> B[Select Task Category]
+        B --> C[Select Prompt Style]
+        C --> D[Enter User Request / Context]
+        D --> E{Submit Request}
+        E --> F[Backend Constructs System Prompt]
+        F --> G[API Call to LLM Provider]
+        G --> H[Render Response in UI]
+        H --> I{User Evaluates Response}
+        I -->|Helpful| J[Log Positive Feedback]
+        I -->|Not Yet| K[Log Constructive Feedback]
+        J --> L([End Workflow])
+        K --> L
+    </div>
+
+    <h2>Prompt Engineering Methodology</h2>
+    <p>Prompt engineering is the core driver of PromptPilot's accuracy and utility. Instead of passing raw user input directly to the model, the backend wraps the input in rigorously tested system instructions.</p>
+    <ul>
+        <li><strong>Prompt Categories:</strong> Tasks are divided by fundamental cognitive intent (Factual Recall, Synthesis, Generation, and Coaching).</li>
+        <li><strong>Prompt Variations:</strong> Within each category, variables like <em>Role</em>, <em>Audience</em>, and <em>Format</em> are adjusted. For example, a "Student notes" summary prompt explicitly instructs the AI to use bullet points and highlight key terminology.</li>
+        <li><strong>Response Consistency:</strong> By anchoring the AI with a strong system persona, the application drastically reduces hallucinations and off-topic dialogue.</li>
+        <li><strong>User-Controlled Selection:</strong> Users remain in control of the output format without needing to know the technical verbiage required to achieve it.</li>
+        <li><strong>Why it improves results:</strong> LLMs operate on probability. Narrowing the context window through highly specific instructions limits the probability of the model generating irrelevant data.</li>
+    </ul>
+
+    <h2>Technologies Used</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Technology</th>
+                <th>Purpose</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Node.js</strong></td>
+                <td>Backend runtime environment handling API requests and file system operations.</td>
+            </tr>
+            <tr>
+                <td><strong>Vanilla JavaScript (ES6)</strong></td>
+                <td>Frontend DOM manipulation and asynchronous fetching without heavy frameworks.</td>
+            </tr>
+            <tr>
+                <td><strong>HTML5 & CSS3</strong></td>
+                <td>Semantic structure and responsive styling of the user interface.</td>
+            </tr>
+            <tr>
+                <td><strong>OpenRouter / OpenAI APIs</strong></td>
+                <td>Large Language Model providers utilized for natural language processing and generation.</td>
+            </tr>
+            <tr>
+                <td><strong>Vercel / @vercel/node</strong></td>
+                <td>Cloud platform for continuous deployment and serverless backend execution.</td>
+            </tr>
+            <tr>
+                <td><strong>Git & GitHub</strong></td>
+                <td>Source code version control and remote repository hosting.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>Project Architecture</h2>
+    <p>PromptPilot employs a lightweight client-server architecture. The frontend communicates with a serverless Node.js backend to prevent exposing secure API keys to the client. The backend routes the request to the designated AI provider, retrieves the response, and serves it back to the client.</p>
+
+    <div class="mermaid">
+    graph LR
+        subgraph Client Side
+            UI[Web Browser UI]
+        end
+        subgraph Serverless Backend - Vercel
+            API[Node.js API Route]
+            Storage[Feedback JSON]
+        end
+        subgraph External Services
+            LLM[OpenRouter / OpenAI]
+        end
+        
+        UI -->|HTTP POST| API
+        API -->|Fetch API| LLM
+        LLM -->|Response| API
+        API -->|Render| UI
+        API -.->|Write| Storage
+    </div>
+
+    <h2>User Guide</h2>
+    
+    <h3>1. Accessing the Application</h3>
+    <p>Navigate to the live deployment link using any modern web browser: <br>
+    <a href="https://promptpilot-six.vercel.app" target="_blank">https://promptpilot-six.vercel.app</a></p>
+
+    <h3>2. Core Navigation</h3>
+    <ol>
+        <li><strong>Choose a Task:</strong> On the left panel, select your overarching goal.</li>
+        <li><strong>Choose a Prompt Style:</strong> Select the specific format you require.</li>
+        <li><strong>Enter Request:</strong> Type or paste your context into the text area.</li>
+        <li><strong>Generate:</strong> Click <strong>Ask PromptPilot</strong> to initiate the AI request.</li>
+    </ol>
+
+    <h3>3. Prompt Styles Overview</h3>
+    <ul>
+        <li><strong>Answer:</strong> <em>Quick fact</em>, <em>Explain simply</em>, <em>Study answer</em>.</li>
+        <li><strong>Summarize:</strong> <em>Brief</em>, <em>Structured</em>, <em>Student notes</em>.</li>
+        <li><strong>Create:</strong> <em>Imaginative</em>, <em>Constrained</em>, <em>Polished</em>.</li>
+        <li><strong>Advise:</strong> <em>Action plan</em>, <em>Supportive</em>, <em>Compare options</em>.</li>
+    </ul>
+
+    <h3>4. Providing Feedback & Troubleshooting</h3>
+    <p>Beneath the AI's response, evaluate the output. Clicking <strong>Yes, helpful</strong> or <strong>Not yet</strong> helps refine prompt structures.</p>
+    <ul>
+        <li><strong>Website does not load:</strong> Verify your internet connection.</li>
+        <li><strong>App displays "DEMO" mode:</strong> This indicates the live environment lacks active API keys, falling back to offline responses.</li>
+    </ul>
+
+    <h2>Testing</h2>
+    <p>The application was validated through manual functional testing to ensure the prompt routing, API integration, and UI state management operate as intended.</p>
+    <table>
+        <thead>
+            <tr>
+                <th>Test Case</th>
+                <th>Input</th>
+                <th>Expected Result</th>
+                <th>Actual Result</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>UI Rendering</strong></td>
+                <td>Navigate to URL</td>
+                <td>Page loads with all 4 task buttons visible</td>
+                <td>As expected</td>
+                <td>Pass</td>
+            </tr>
+            <tr>
+                <td><strong>Prompt Selection</strong></td>
+                <td>Click "Summarize" -> "Brief"</td>
+                <td>UI updates to highlight selection</td>
+                <td>As expected</td>
+                <td>Pass</td>
+            </tr>
+            <tr>
+                <td><strong>Empty Submission</strong></td>
+                <td>Click "Ask" with empty input</td>
+                <td>Warning/Error shown preventing API call</td>
+                <td>Error caught</td>
+                <td>Pass</td>
+            </tr>
+            <tr>
+                <td><strong>API Request (Demo)</strong></td>
+                <td>"capital of france" (Answer)</td>
+                <td>Server returns fallback demo string "Paris"</td>
+                <td>Demo string returned</td>
+                <td>Pass</td>
+            </tr>
+            <tr>
+                <td><strong>Feedback Logging</strong></td>
+                <td>Click "Yes, helpful"</td>
+                <td>Success message displayed; JSON payload sent</td>
+                <td>Status 200 OK</td>
+                <td>Pass</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>Screenshots</h2>
+    <blockquote>[Placeholder: Screenshot of the Home Page showcasing the clean UI]</blockquote>
+    <blockquote>[Placeholder: Screenshot of the Task and Prompt Style Selection]</blockquote>
+    <blockquote>[Placeholder: Screenshot of a Generated Response Output in the dark panel]</blockquote>
+    <blockquote>[Placeholder: Screenshot of the Feedback Evaluation Dialog]</blockquote>
+
+    <h2>Deployment</h2>
+    <ul>
+        <li><strong>Deployment Platform:</strong> Vercel</li>
+        <li><strong>Live URL:</strong> <a href="https://promptpilot-six.vercel.app" target="_blank">https://promptpilot-six.vercel.app</a></li>
+        <li><strong>Source Code:</strong> <a href="https://github.com/Shak33LX/promptpilot-ai-assistant" target="_blank">https://github.com/Shak33LX/promptpilot-ai-assistant</a></li>
+    </ul>
+    <p><strong>Note on Demo Mode:</strong> To protect billing quotas, the live deployment environment variables for the LLM provider are intentionally omitted. The application gracefully degrades into a "Demo Mode" utilizing hardcoded fallback responses.</p>
+
+    <h2>Future Improvements</h2>
+    <ul>
+        <li><strong>Conversation History:</strong> Implementing local storage to retain previous prompts across sessions.</li>
+        <li><strong>Export Functionality:</strong> Allowing users to download responses as <code>.txt</code> or <code>.pdf</code>.</li>
+        <li><strong>Analytics Dashboard:</strong> Visualizing the data collected in the feedback system.</li>
+        <li><strong>Authentication:</strong> Adding user accounts to personalize prompt preferences.</li>
+    </ul>
+
+    <h2>Limitations</h2>
+    <ul>
+        <li><strong>Stateless Architecture:</strong> The application does not retain context or memory of previous turns in the conversation.</li>
+        <li><strong>Feedback Storage:</strong> The current JSON approach is not persistent across serverless function restarts in production.</li>
+        <li><strong>API Dependency:</strong> Relies entirely on the uptime of third-party LLM providers.</li>
+    </ul>
+
+    <h2>Conclusion</h2>
+    <p>PromptPilot successfully demonstrates the practical application of prompt engineering within a user-friendly software environment. By removing the friction of manual prompt construction, the project achieves its goal of making AI interactions more predictable, structured, and useful. The serverless backend deployed on Vercel proves the viability of lightweight architectures for AI wrappers.</p>
+
+    <h2>References</h2>
+    <ol>
+        <li><strong>PromptPilot Live Deployment:</strong> <a href="https://promptpilot-six.vercel.app" target="_blank">https://promptpilot-six.vercel.app</a></li>
+        <li><strong>Source Code Repository:</strong> <a href="https://github.com/Shak33LX/promptpilot-ai-assistant" target="_blank">https://github.com/Shak33LX/promptpilot-ai-assistant</a></li>
+        <li><strong>Project User Guide:</strong> <code>USER_GUIDE.md</code></li>
+    </ol>
 
 </body>
 </html>
