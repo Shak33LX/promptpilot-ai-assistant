@@ -10,25 +10,11 @@ PromptPilot is a web-based AI Assistant created for the **AI Assistant Developme
 
 ## Quick start
 
-### 1. Open a terminal
+### 1. Visit the App
 
-Open **Windows PowerShell** or **Windows Terminal** and move into the project folder:
+Open [https://promptpilot-six.vercel.app](https://promptpilot-six.vercel.app) in your web browser.
 
-```powershell
-cd "C:\Users\Mohamed Shakeel\OneDrive\Desktop\Internship 26\project dev env"
-```
-
-### 2. Start PromptPilot
-
-```powershell
-npm start
-```
-
-### 3. Visit the app
-
-Open [http://localhost:3000](http://localhost:3000) in your browser.
-
-Keep the terminal window open while using the app. To stop the server later, press `Ctrl + C` in that terminal.
+You can access the assistant from any device without needing to run any code locally!
 
 ---
 
@@ -132,20 +118,16 @@ Feedback is saved locally in `feedback.json`. It can be used to see which prompt
 
 ## AI connection setup
 
-PromptPilot works in **demo mode** without an API key. For real AI-generated answers, configure a free-tier OpenRouter key.
+PromptPilot is configured to run in **demo mode** without an API key to prevent unwanted charges. For real AI-generated answers, you can add an OpenRouter key to the Vercel deployment:
 
 1. Create an API key at [OpenRouter Keys](https://openrouter.ai/settings/keys).
-2. Create a `.env` file in the project folder (you can rename `.env.example`).
-3. Add the following values:
+2. Go to your Vercel Project Dashboard -> Settings -> Environment Variables.
+3. Add the following keys:
+   - `OPENROUTER_API_KEY`: `your_private_key_here`
+   - `OPENROUTER_MODEL`: `openrouter/free`
+4. Redeploy your project for the changes to take effect.
 
-```env
-OPENROUTER_API_KEY=your_private_key_here
-OPENROUTER_MODEL=openrouter/free
-```
-
-4. Restart the app with `npm start`.
-
-Never share your API key or upload the `.env` file to GitHub.
+Never share your API key publicly or commit it to GitHub.
 
 ---
 
@@ -153,11 +135,9 @@ Never share your API key or upload the `.env` file to GitHub.
 
 | Problem | What to do |
 | --- | --- |
-| `localhost:3000` does not open | Make sure `npm start` is running and the terminal stays open. |
-| Port 3000 is already in use | Close the earlier PromptPilot terminal, then run `npm start` again. |
-| The app shows **DEMO** | Check that `.env` is in the project folder, has a valid key, and restart the server. |
-| API responses fail | Confirm that your internet connection and OpenRouter account/key are active. |
-| `.env` does not work | In Notepad, save it as **All Files** with the exact name `.env`, not `.env.txt`. |
+| The website does not open | Check your internet connection and ensure the URL is correct. |
+| The app shows **DEMO** | The live deployment does not have an active API key configured. You must add it to Vercel's Environment Variables. |
+| API responses fail | Confirm that your OpenRouter account/key is active. |
 
 ---
 
