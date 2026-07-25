@@ -148,7 +148,6 @@ Never share your API key publicly or commit it to GitHub.
 - [x] User-friendly web interface
 - [x] Clear response area
 - [x] Helpful / not-helpful feedback loop
-- [x] PowerPoint user guide
 - [x] Markdown user guide
 
 ---
